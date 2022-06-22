@@ -3,6 +3,7 @@
 https://gist.github.com/zvldz/1bd6b21539f84339c218f9427e022709
 
 ＃＃＃ 硬件
+
 1.打开网关外壳：
 
    <img src=https://user-images.githubusercontent.com/511909/98269111-6da8b980-1f9e-11eb-82ef-d435a900edf1.jpg>
