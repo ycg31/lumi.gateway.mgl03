@@ -2,7 +2,7 @@
 如果您只需要在官方固件上打开 telnet，请使用“软件”方法：
 https://gist.github.com/zvldz/1bd6b21539f84339c218f9427e022709
 
-＃＃＃ 硬件
+### 硬件
 
 1.打开网关外壳：
 
@@ -60,7 +60,7 @@ https://gist.github.com/zvldz/1bd6b21539f84339c218f9427e022709
 4. 按照屏幕上的说明进行操作
 5. 执行恢复出厂设置：网关完全启动后，重复点击它的按钮 10 次。
  
- ＃＃＃ 故障排除
+ ### 故障排除
  #### 如果出现问题，请检查以下内容：
 1. 用酒精清洁焊接区域，污垢和助焊剂残留可能导致短路（参见：[issue 87](https://github.com/AlexxIT/XiaomiGateway3/issues/87#issuecomment-754325553)）
 2.确保你UART正确连接，唯一正确的方法是Tx到Rx，反之亦然（而不是Tx到Tx和Rx到Rx）：（参见[问题18]（https://github.com/serrj -sv/lumi.gateway.mgl03/issues/18))：
