@@ -1,12 +1,12 @@
 # 软破解打开 telnet
-您需要将网关连接到米家，获取ip和网关令牌。
+您需要将网关连接到米家APP以获取ip和网关令牌。
 
 ### 方法1（推荐）
 通过 [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) 组件。
 
 您必须在“打开 Telnet 命令”字段中输入（**原样，无需更改任何内容**）：
 ```
-{"method":"set_ip_info","params":{"ssid":"\"\"","pswd":"123123 ; passwd -d admin ; echo enable > /sys/class/tty/tty/enable ; 远程登录"}}
+{"method":"set_ip_info","params":{"ssid":"\"\"","pswd":"123123 ; passwd -d admin ; echo enable > /sys/class/tty/tty/enable; telnetd"}}
 ```
 
 ### 方法2（如果不使用 Home Assistant，建议使用）
@@ -14,13 +14,13 @@ php-miio (https://github.com/skysilver-lab/php-miio)
 
 您可能需要更改 id。
 ```外壳
-php miio-cli.php --ip GW_IP --token GW_TOKEN --sendcmd '{"id":123,"method":"set_ip_info","params":{"ssid":"\"\""," pswd":"123123 ; passwd -d admin ; echo enable > /sys/class/tty/tty/enable; telnetd"}}'
+php miio-cli.php --ip GW_IP --token GW_TOKEN --sendcmd '{"id":123,"method":"set_ip_info","params":{"ssid":"\"\"","pswd":"123123 ; passwd -d admin ; echo enable > /sys/class/tty/tty/enable; telnetd"}}'
 ```
 
-### 方法3（可能序列 id 有问题）
+### 方法3（序列号可能存在问题）
 python-miio (https://github.com/rytilahti/python-miio)
 ```外壳
-miiocli device --ip GW_IP --token GW_TOKEN raw_command set_ip_info '{"ssid":"\"\"","pswd":"123123 ; passwd -d admin ; echo enable > /sys/class/tty/tty/enable ; 远程登录"}'
+miiocli device --ip GW_IP --token GW_TOKEN raw_command set_ip_info '{"ssid":"\"\"","pswd":"123123 ; passwd -d admin ; echo enable > /sys/class/tty/tty/enable; telnetd"}'
 ```
 
 
@@ -41,7 +41,7 @@ https://github.com/zvldz/mgl03_fw/tree/main/firmware#the-easy-way
 * lumi.gateway.sacn01 - 智能 USB 墙壁插座集线器
 
 # Aqara Hub E1 (ZHWG16LM usb stick)
-您需要将网关 E1 连接到 MiHome。还有ip和网关令牌。
+您需要将网关 E1 连接到米家APP以获取ip和网关令牌。
 
 ### 方法1（推荐）
 通过 [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) 组件，版本 2+。
@@ -59,7 +59,7 @@ php-miio (https://github.com/skysilver-lab/php-miio)
 php miio-cli.php --ip GW_IP --token GW_TOKEN --sendcmd '{"id":123,"method":"set_ip_info","params":{"ssid":"\"\""," pswd":"123123 ; /bin/riu_w 101e 53 3012; telnetd"}}'
 ```
 
-### 方法3（可能序列 id 有问题）
+### 方法3（序列号可能存在问题）
 python-miio (https://github.com/rytilahti/python-miio)
 ```外壳
 miiocli 设备 --ip GW_IP --token GW_TOKEN raw_command set_ip_info '{"ssid":"\"\"","pswd":"123123 ; /bin/riu_w 101e 53 3012 ; telnetd"}'
