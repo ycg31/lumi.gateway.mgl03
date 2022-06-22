@@ -1,2 +1,2 @@
 # Xiaomi Gateway v3
-Collection of documents, tools, scripts, sources, firmwares and recoveries
+文档、工具、脚本、资源、固件和恢复的集合
